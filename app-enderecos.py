@@ -25,7 +25,7 @@ def api_dist():
         end_1 = x
         end_2 = y
 
-        api_key = 'KEY'
+        api_key = 'ADICIONE A KEY AQUI'
 
         client = googlemaps.Client(api_key)
 
@@ -56,7 +56,7 @@ def api_dist():
 def get_google_maps_url(visited2):
     base_url = "https://www.google.com/maps/dir/"
 
-    endq = '+'.join(map(str, visited2))
+    endq = ''.join(map(str, visited2))
 
     google_maps_url = base_url + endq
 
@@ -87,7 +87,7 @@ def main():
 
     unvisited = {node: None for node in nodes} 
     visited = {}
-    visited2 = []
+    visited_list_2 = []
     current = lista_end[0]
     currentDistance = 0
     unvisited[current] = currentDistance
@@ -104,13 +104,30 @@ def main():
         candidates = [node for node in unvisited.items() if node[1]]
         current, currentDistance = sorted(candidates, key = lambda x: x[1])[0]
 
-    print(visited)
+    print("visited", visited)
+    items_str = ', '.join(visited)
 
-    for item in visited:
-        visited2.append(item.replace(" ", "+"))
-    print(visited2)
+    print("items_str", items_str)
 
-    maps_url = get_google_maps_url('/'.join(visited2))
+    
+    ##Lista da rota em string   
+    items_str = ', '.join(visited)
+
+    ##tira a distancia de visited 
+    visited_list = [item.strip() for item in items_str.split(',')]
+
+    print("visited_list", visited_list)
+    
+
+    print("O número de itens em visited_list é:", len(visited_list))
+    
+    for item in visited_list:
+        visited_list_2.append(item.replace(" ", "+"))
+    print(visited_list_2)
+  
+
+
+    maps_url = get_google_maps_url('/'.join(visited_list_2))
 
     print("Google Maps URL:", maps_url)
     exit()
