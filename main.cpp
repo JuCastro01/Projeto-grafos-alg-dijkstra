@@ -350,7 +350,7 @@ string r1;
 
 while (b != 'i'){
   cout << "\n ------------------------------ \n | Projeto de teoria de Grafos | \n ------------------------------\n \n \n +   Esse trabalho se relaciona com os objetivos ODS 11 e 13,\n pois tem como objetivo a diminuição da emissão de gases \n poluentes pelos veiculos que fazem entregas em diversos \n endereços consecutivos.  \n \n ----------------------------------------------------------- \n \n Digite a letra correspondente a função que deseja executar: \n \n "<< 
-    "*Execute a opção b antes de executar qualquer outra!* \n \n a -> Ler dados do arquivo grafo.txt\n b -> Gravar dados no arquivo grafo.txt\n c -> Inserir vértice\n d -> Inserir aresta;\n e -> Remove vértice;\n f -> Remove aresta;\n g -> Mostrar conteúdo do arquivo;\n h -> Mostrar grafo;\n i -> Encerrar a aplicação. \n j -> Verificar conexividade \n k -> Aplicação solução \n\n" << endl;
+    "*Execute a opção b antes de executar qualquer outra!* \n \n a -> Ler dados do arquivo grafo.txt\n b -> Gravar dados no arquivo grafo.txt\n c -> Inserir vértice\n d -> Inserir aresta;\n e -> Remove vértice;\n f -> Remove aresta;\n g -> Mostrar conteúdo do arquivo;\n h -> Mostrar grafo;\n i -> Encerrar a aplicação. \n j -> Verificar conexividade \n k -> Otimização da ordem do percurso das entregas.\n \n" << endl;
   cin >> b;
   switch(b) {
 
